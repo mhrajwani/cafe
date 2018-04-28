@@ -33,5 +33,24 @@
                         <button type="submit" class="btn btn-primary btn-md " id="add-btn"><span class="glyphicon glyphicon-fire"></span> Reserve</button>
                       </div>
     </div>
+    <script type="text/javascript">
+        alert("hi")
+        $("#add-btn").on("click", function(event) {
+          event.preventDefault();
+    
+          var newreservation = {
+            name: $("#name").val(),
+            id: $("#id").val()
+          };
+    
+          // Question: What does this code do??
+          $.post("/api/tables", newreservation)
+            .then(function(data) {
+              console.log(data);
+              alert("Adding reservation...");
+            });
+    
+        });
+      </script>
 </body>
 </html>
