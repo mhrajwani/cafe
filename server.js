@@ -75,7 +75,7 @@ app.get("/api/tables/:tables", function(req, res) {
   
     // Using a RegEx Pattern to remove spaces from newCharacter
     // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-    newreservation.routeName = newreservation.name.replace(/\s+/g, "").toLowerCase();
+    
   
     console.log(newreservation);
   
